@@ -17,7 +17,7 @@ public class VariablesTheme {
         System.out.println(numberOfUsbPorts + " - количество USB портов");
         System.out.println(processorFrequencyMin + " - частота процессора минимальная");
         System.out.println(processorFrequencyMax + " - частота процессора максимальная");
-        System.out.println(osVersion + " - версия операционной сиситемы");
+        System.out.println(osVersion + " - версия операционной системы");
         System.out.println(is64BitOs + " - 64-х разрядная система \n");
 
         System.out.println("2. Расчет стоимости товара со скидкой");
@@ -39,27 +39,27 @@ public class VariablesTheme {
 
         System.out.println("4. Вывод min и max значений целых числовых типов");
         byte threeDigitNumber = 127;
-        short fiveDigitNumcer = 32767;
-        int tenDigitNumber = 2147483647;
-        long nineteenDigitNumber = 9223372036854775807L;
-        System.out.println(threeDigitNumber + " - самое большое число тиапа byte");
+        System.out.println(threeDigitNumber + " - самое большое число типа byte");
         threeDigitNumber++;
         System.out.println(threeDigitNumber + " - число после инкремента на единицу");
         threeDigitNumber--;
         threeDigitNumber--;
-        System.out.println(threeDigitNumber + " - число после декремента на единицу\n");
+        System.out.println(threeDigitNumber + " - число после декремента на единицу");
+        short fiveDigitNumcer = 32767;
         System.out.println(fiveDigitNumcer + " - самое большое число типа short");
         fiveDigitNumcer++;
         System.out.println(fiveDigitNumcer + " -число после инкремента на единицу");
         fiveDigitNumcer--;
         fiveDigitNumcer--;
-        System.out.println(fiveDigitNumcer + " - число после декремента на единицу\n");
+        System.out.println(fiveDigitNumcer + " - число после декремента на единицу");
+        int tenDigitNumber = 2147483647;
         System.out.println(tenDigitNumber + " - самое большое число типа int");
         tenDigitNumber++;
         System.out.println(tenDigitNumber + " - число после инкремента на единицу");
         tenDigitNumber--;
         tenDigitNumber--;
-        System.out.println(tenDigitNumber + " - число после декремента на единицу\n");
+        System.out.println(tenDigitNumber + " - число после декремента на единицу");
+        long nineteenDigitNumber = 9223372036854775807L;
         System.out.println(nineteenDigitNumber + " - самое большое число типа long");
         nineteenDigitNumber++;
         System.out.println(nineteenDigitNumber + " - число после инкремента на единицу");
@@ -70,19 +70,19 @@ public class VariablesTheme {
         System.out.println("5. Перестановка значений переменных");
         int two = 2;
         int five = 5;
-        int variable;
+        int x;
         System.out.println("С помощью третьей переменной");
         System.out.println("two = " + two + ", five = " + five + " - исходные значения переменных");
-        variable = two;
+        x = two;
         two = five;
-        five = variable;
+        five = x;
         System.out.println("two = " + two + ", five = " + five + 
-                " - значения переменных после перестановки\n");
+                " - значения переменных после перестановки");
         System.out.println("C помощью арифметических операций");
         two = two - 3;
         five = five + 3;
         System.out.println("two = " + two + ", five = " + five + 
-                " - значения переменных после арифметических операций\n");
+                " - значения переменных после арифметических операций");
         System.out.println("С помощью побитовой операции ^");
         int seven = 7;
         two = two ^ seven;
