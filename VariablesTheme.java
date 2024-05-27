@@ -21,16 +21,16 @@ public class VariablesTheme {
         System.out.println(is64BitOs + " - 64-х разрядная система ");
 
         System.out.println(" \n 2. Расчет стоимости товара со скидкой");
-        var pen = new BigDecimal("105.5");
-        var book = new BigDecimal("235.83");
+        var penPrice = new BigDecimal("105.5");
+        var bookPrice = new BigDecimal("235.83");
         var discount = new BigDecimal("0.11");
-        var totaCost = pen.add(book);
+        var totaCost = penPrice.add(bookPrice);
         var sumDiscount = totaCost.multiply(discount);
-        var totalPriceWithDiscount = totaCost.subtract(sumDiscount);
+        var discountPrice = totaCost.subtract(sumDiscount);
         
         System.out.println(totaCost + " - общая стоимость товаров без скидки");
         System.out.println(sumDiscount + " - сумма скидки");
-        System.out.println(totalPriceWithDiscount + " - общая стоимость со скидкой ");
+        System.out.println(discountPrice + " - общая стоимость со скидкой ");
 
         System.out.println(" \n 3. Вывод слова JAVA");
         System.out.println("    J    a  v     v  a");
@@ -44,13 +44,11 @@ public class VariablesTheme {
         byteMaxMin++;
         System.out.println(byteMaxMin + " - число после инкремента на единицу");
         byteMaxMin--;
-        byteMaxMin--;
         System.out.println(byteMaxMin + " - число после декремента на единицу");
         short shortMaxMin = 32767;
         System.out.println(shortMaxMin + " - самое большое число типа short");
         shortMaxMin++;
         System.out.println(shortMaxMin + " -число после инкремента на единицу");
-        shortMaxMin--;
         shortMaxMin--;
         System.out.println(shortMaxMin + " - число после декремента на единицу");
         int intMaxMin = 2147483647;
@@ -58,13 +56,11 @@ public class VariablesTheme {
         intMaxMin++;
         System.out.println(intMaxMin + " - число после инкремента на единицу");
         intMaxMin--;
-        intMaxMin--;
         System.out.println(intMaxMin + " - число после декремента на единицу");
         long longMaxMin = 9223372036854775807L;
         System.out.println(longMaxMin + " - самое большое число типа long");
         longMaxMin++;
         System.out.println(longMaxMin + " - число после инкремента на единицу");
-        longMaxMin--;
         longMaxMin--;
         System.out.println(longMaxMin + " - число после декремента на единицу");
 
@@ -79,49 +75,45 @@ public class VariablesTheme {
         System.out.println("a = " + a + ", b = " + b + 
                 " - значения переменных после перестановки");
         System.out.println("C помощью арифметических операций");
-        a = a - 3;
-        b = b + 3;
+        a += b;
+        b = a - b;
+        a -= b;
         System.out.println("a = " + a + ", b = " + b + 
                 " - значения переменных после арифметических операций");
         System.out.println("С помощью побитовой операции ^");
-        swap = 7;
-        a = a ^ swap;
-        b = b ^ swap;
+        a ^= b;
+        b ^= a;
+        a ^= b;
         System.out.println("a = " + a + ", b = " + b + 
                 " - значения переменных после побитовых операций");
 
         System.out.println(" \n 6. Вывод символов и их кодов");
         
         char dollar = '$';
-        int v = dollar;
         char asterisk = '*';
-        int ast = asterisk;
         char atSign = '@';
-        int atSi = atSign;
         char verticalBar = '|';
-        int verBar = verticalBar;
         char tilde = '~';
-        int til = tilde;
-        System.out.println(v + " - " + dollar);
-        System.out.println(ast + " - " + asterisk);
-        System.out.println(atSi + " - " + atSign);
-        System.out.println(verBar + " - " + verticalBar);
-        System.out.println(til + " - " + tilde);
+        System.out.println((int) '$' + " - " + dollar);
+        System.out.println((int) '*' + " - " + asterisk);
+        System.out.println((int) '@' + " - " + atSign);
+        System.out.println((int) '|' + " - " + verticalBar);
+        System.out.println((int) '~' + " - " + tilde);
 
         System.out.println("\n 7. Вывод в консоль ASCII-арт Дюка");
         char leftSlash = '/';
-        char rightSlash = '\\';
+        char backSlash = '\\';
         char underscore = '_';
         char leftParenthesis = '(';
         char rightParenthesis = ')';
-        System.out.println("         " + leftSlash + rightSlash);
-        System.out.println("        " + leftSlash + "  " + rightSlash);
+        System.out.println("         " + leftSlash + backSlash);
+        System.out.println("        " + leftSlash + "  " + backSlash);
         System.out.println("       " + leftSlash + underscore + 
-                leftParenthesis + " " + rightParenthesis + rightSlash);
-        System.out.println("      " + leftSlash + "      " + rightSlash);
+                leftParenthesis + " " + rightParenthesis + backSlash);
+        System.out.println("      " + leftSlash + "      " + backSlash);
         System.out.println("     " + leftSlash + underscore + underscore + 
-                underscore + underscore + leftSlash + rightSlash +
-                underscore + underscore + rightSlash);
+                underscore + underscore + leftSlash + backSlash +
+                underscore + underscore + backSlash);
 
         System.out.println("\n 8. Вывод количества сотен, десятков и единиц числа");
         int number = 123;
