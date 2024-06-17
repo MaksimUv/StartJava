@@ -1,6 +1,5 @@
 import java.math.BigDecimal;
 
-
 public class IfElseStatementTheme {
     public static void main(String[] args) {
         System.out.println("1. Перевод псевдокода на язык Java");
@@ -66,7 +65,7 @@ public class IfElseStatementTheme {
         int q = 169;
         int p = 269;
         int q1 = q / 100;
-        int q2 = (q % 100) /10;
+        int q2 = (q % 100) / 10;
         int q3 = q % 10;
         int p1 = p / 100;
         int p2 = (p % 100) / 10;
@@ -76,11 +75,10 @@ public class IfElseStatementTheme {
                 q3 != p2 & q3 != p3 & p1 != p2 & p1 != p3 & p2 != p3) {
             System.out.println("Все цифры в разрядах разные");
             System.exit(0); 
-        }
-        else if (q1 == p1 | q2 == p2 | q3 == p3) {
+        } else if (q1 == p1 | q2 == p2 | q3 == p3) {
             System.out.println("Исходные числа : " + q + ", " + p);
             if (q1 == p1 & q2 == p2 & q3 == p3) {
-                System.out.println("Одинаковые в них цифры : " + q1 +", " + q2 + ", " + q3);
+                System.out.println("Одинаковые в них цифры : " + q1 + ", " + q2 + ", " + q3);
                 System.out.println("Номера разрядов : 1 , 2 , 3");
             }
             if (q1 == p1 & q2 == p2) {
@@ -119,89 +117,77 @@ public class IfElseStatementTheme {
         System.out.println("" + simbol2);
         System.out.println("" + simbol3);
         System.out.println((int) simbol3 + " - " + simbol3);
-        if ((int)simbol3 >= 65 & (int)simbol3 <= 90) {
+        if ((int) simbol3 >= 65 & (int) simbol3 <= 90) {
             System.out.println("Это заглавная буква");
-        }
-        else if ((int)simbol3 >= 97 & (int)simbol3 <= 122) {
+        } else if ((int) simbol3 >= 97 & (int) simbol3 <= 122) {
             System.out.println("Это строчная буква");
-        }
-        else if ((int)simbol3 >= 48 & (int)simbol3 <= 57) {
+        } else if ((int) simbol3 >= 48 & (int) simbol3 <= 57) {
             System.out.println("Это цифра");
         } else {
-        System.out.println("Это другой символ");
-    }
+            System.out.println("Это другой символ");
+        }
 
-    System.out.println("\n 6. Подсчет начисленных банком %");
-    var contribution = new BigDecimal("321123.59");
-    var rate = new BigDecimal("0.05");
-    var b1 = new BigDecimal("100000");
-    var b2 = new BigDecimal("300000");
-    if (contribution.compareTo(b1) == -1) {
-        rate = new BigDecimal("0.05");
-    }
-    else if ((contribution.compareTo(b1) == 0) & (contribution.compareTo(b2) == -1)) {
-        rate = new BigDecimal("0.07");
-    }
-    else {
-        rate = new BigDecimal("0.1");
-    }
-    System.out.println("Сумма вклада = " + contribution);
-    var sumRate = rate.multiply(contribution);
-    System.out.println(String.format("Сумма начисленного процента - %.2f" , sumRate));
-    var totalSum = contribution.add(sumRate);
-    System.out.println(String.format("Итоговая сумма с процентами - %.2f" , totalSum));
+        System.out.println("\n 6. Подсчет начисленных банком %");
+        var contribution = new BigDecimal("321123.59");
+        var rate = new BigDecimal("0.05");
+        var b1 = new BigDecimal("100000");
+        var b2 = new BigDecimal("300000");
+        if (contribution.compareTo(b1) == -1) {
+            rate = new BigDecimal("0.05");
+        } else if ((contribution.compareTo(b1) == 0) & (contribution.compareTo(b2) == -1)) {
+            rate = new BigDecimal("0.07");
+        } else {
+            rate = new BigDecimal("0.1");
+        }
+        System.out.println("Сумма вклада = " + contribution);
+        var sumRate = rate.multiply(contribution);
+        System.out.println(String.format("Сумма начисленного процента - %.2f", sumRate));
+        var totalSum = contribution.add(sumRate);
+        System.out.println(String.format("Итоговая сумма с процентами - %.2f", totalSum));
 
-    System.out.println("\n 7. Определение оценки по предметам");
-    double hystory = 0.59;
-    double programm = 0.92;
-    double hystoryMark = 1;
-    double programmMark = 1;
-    if (hystory <= 0.6) {
-        hystoryMark = 2;
-    }
-    else if (hystory > 0.6 & hystory <= 0.73) {
-        hystoryMark = 3;
-    }
-    else if (hystory > 0.73 & hystory <= 0.91) {
-        hystoryMark = 4;
-    }
-    else if (hystory > 0.91) {
-        hystoryMark = 5;
-    }
-    System.out.println(String.format("История - %.0f" , hystoryMark));
-    if (programm <= 0.6) {
-        programmMark = 2;
-    }
-    else if (programm > 0.6 & programm <= 0.73) {
-        programmMark = 3;
-    }
-    else if (programm > 0.73 & programm <= 0.91) {
-        programmMark = 4;
-    }
-    else if (programm > 0.91) {
-        programmMark = 5;
-    }
-    System.out.println(String.format("Программирование - %.0f" , programmMark));
-    double GPA = (hystoryMark + programmMark) / 2;
-    System.out.println("Средний балл оценок по предметам - " + GPA);
-    double averagePercent = (hystory + programm) / 2;
-    System.out.println(String.format("Средний процент по предметам - %.2f" , averagePercent));
+        System.out.println("\n 7. Определение оценки по предметам");
+        double hystory = 0.59;
+        double programm = 0.92;
+        double hystoryMark = 1;
+        double programmMark = 1;
+        if (hystory <= 0.6) {
+            hystoryMark = 2;
+        } else if (hystory > 0.6 & hystory <= 0.73) {
+            hystoryMark = 3;
+        } else if (hystory > 0.73 & hystory <= 0.91) {
+            hystoryMark = 4;
+        } else if (hystory > 0.91) {
+            hystoryMark = 5;
+        }
+        System.out.println(String.format("История - %.0f", hystoryMark));
+        if (programm <= 0.6) {
+            programmMark = 2;
+        } else if (programm > 0.6 & programm <= 0.73) {
+            programmMark = 3;
+        } else if (programm > 0.73 & programm <= 0.91) {
+            programmMark = 4;
+        } else if (programm > 0.91) {
+            programmMark = 5;
+        }
+        System.out.println(String.format("Программирование - %.0f", programmMark));
+        double gpa = (hystoryMark + programmMark) / 2;
+        System.out.println("Средний балл оценок по предметам - " + gpa);
+        double averagePercent = (hystory + programm) / 2;
+        System.out.println(String.format("Средний процент по предметам - %.2f", averagePercent));
 
-    System.out.println("\n 8. Расчет годовой прибыли");
-    var productSale = new BigDecimal("13025.233");
-    var rentCost = new BigDecimal("5123.018");
-    var costPrice = new BigDecimal("9001.729");
-    var months = new BigDecimal ("12");
-    var zeroProfit = new BigDecimal("0");
-    var annualProfit = productSale.subtract(rentCost).subtract(costPrice).multiply(months);
-    if (annualProfit.compareTo(zeroProfit) == 1) {
-        System.out.println(String.format("Прибыль за год : +%.2f", annualProfit));
-    }
-    else if (annualProfit.compareTo(zeroProfit) == 0) {
-        System.out.println("Прибыль за год : " + annualProfit);
-    }
-    else {
-        System.out.println(String.format("Прибыль за год : %.2f", annualProfit));
-    }
+        System.out.println("\n 8. Расчет годовой прибыли");
+        var productSale = new BigDecimal("13025.233");
+        var rentCost = new BigDecimal("5123.018");
+        var costPrice = new BigDecimal("9001.729");
+        var months = new BigDecimal("12");
+        var zeroProfit = new BigDecimal("0");
+        var annualProfit = productSale.subtract(rentCost).subtract(costPrice).multiply(months);
+        if (annualProfit.compareTo(zeroProfit) == 1) {
+            System.out.println(String.format("Прибыль за год : +%.2f", annualProfit));
+        } else if (annualProfit.compareTo(zeroProfit) == 0) {
+            System.out.println("Прибыль за год : " + annualProfit);
+        } else {
+            System.out.println(String.format("Прибыль за год : %.2f", annualProfit));
+        }
     }
 }
