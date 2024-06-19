@@ -37,91 +37,74 @@ public class IfElseStatementTheme {
             System.out.println("x = " + x + ", y = " + y + ", x > y");
         } else if (x < y) {
             System.out.println("x = " + x + ", y = " + y + ", x < y");
-        } else if (x == y) {
+        } else {
             System.out.println("x = " + x + ", y = " + y + ", x = y\n");
         }
 
         System.out.println("3. Проверка числа");
         int numberVar = -10;
         if (numberVar == 0) {
-            System.out.println("Переменная равна нулю");
-            System.exit(0);
-        }
-        if (numberVar < 0) {
+            System.out.println("Значение равно нулю");
+        } else if (numberVar < 0) {
             if (numberVar % 2 == 1) {
-                System.out.println(+ numberVar + " Является отрицательным и нечетным");
+                System.out.println(numberVar + " Является отрицательным и нечетным");
             } else {
-                System.out.println(+ numberVar + " Является отрицательным и четным");
+                System.out.println(numberVar + " Является отрицательным и четным");
             }
-        } else if (numberVar > 0) {
+        } else {
             if (numberVar % 2 == 0) {
-                System.out.println(+ numberVar + " Является положительным и четным");
+                System.out.println(numberVar + " Является положительным и четным");
             } else {
-                System.out.println(+ numberVar + " Является положительным и нечетным");
+                System.out.println(numberVar + " Является положительным и нечетным");
             }
         }
 
         System.out.println("\n 4. Поиск одинаковых цифр в числах");
-        int q = 169;
-        int p = 269;
-        int q1 = q / 100;
-        int q2 = (q % 100) / 10;
-        int q3 = q % 10;
-        int p1 = p / 100;
-        int p2 = (p % 100) / 10;
-        int p3 = p % 10;
-        if (q1 != q2 & q1 != q3 & q1 != p1 & q1 != p2 & q1 != p3 &
-                q2 != q3 & q2 != p1 & q2 != p2 & q2 != p3 & q3 != p1 & 
-                q3 != p2 & q3 != p3 & p1 != p2 & p1 != p3 & p2 != p3) {
-            System.out.println("Все цифры в разрядах разные");
-            System.exit(0); 
-        } else if (q1 == p1 | q2 == p2 | q3 == p3) {
-            System.out.println("Исходные числа : " + q + ", " + p);
-            if (q1 == p1 & q2 == p2 & q3 == p3) {
-                System.out.println("Одинаковые в них цифры : " + q1 + ", " + q2 + ", " + q3);
-                System.out.println("Номера разрядов : 1 , 2 , 3");
-            }
-            if (q1 == p1 & q2 == p2) {
-                System.out.println("Одинаковые в них цифры : " + q1 + ", " + q2);
-                System.out.println("Номера разрядов : 1 , 2");
-            }
-            if (q1 == p1 & q3 == p3) {
-                System.out.println("Одинаковые в них цифры : " + q1 + ", " + q3);
-                System.out.println("Номера разрядов : 1 , 3");
-            }
-            if (q2 == p2 & q3 == p3) {
-                System.out.println("Одинаковые в них цифры : " + q2 + ", " + q3);
-                System.out.println("Номера разрядов : 2 , 3");
-            }
-            if (q3 == p3) {
-                System.out.println("Одинаковые в них цифры : " + q3);
-                System.out.println("Номер разряда : 3");
-            }
-            if (q2 == p2) {
-                System.out.println("Одинаковые в них цифры : " + q2);
-                System.out.println("Номер разряда : 2");
-            }
-            if (q1 == p1) {
-                System.out.println("Одинаковые в них цифры : " + q1);
-                System.out.println("Номер разряда : 1");
-            }
+        int number1 = 169;
+        int number2 = 269;
+        int hundreds1 = number1 / 100;
+        int tens1 = (number1 % 100) / 10;
+        int ones1 = number1 % 10;
+        int hundreds2 = number2 / 100;
+        int tens2 = (number2 % 100) / 10;
+        int ones2 = number2 % 10;
+        if (hundreds1 != hundreds2 & tens1 != tens2 & ones1 != ones1) {
+            System.out.println("Все цифры в одних и тех же в разрядах разные");
         } else {
-            System.out.println("Одинаковых цифр, стоящих в одном и том же разряде нет");
+            System.out.println("Исходные числа : " + number1 + ", " + number2);
+        }
+        if (hundreds1 == hundreds2 & tens1 == tens2 & ones1 == ones2) {
+            System.out.println("Одинаковые в них цифры : " + hundreds1 + ", " + tens1 + ", " + ones1);
+            System.out.println("Номера разрядов : 1 , 2 , 3");
+        } else if (hundreds1 == hundreds2 & tens1 == tens2) {
+            System.out.println("Одинаковые в них цифры : " + hundreds1 + ", " + tens1);
+            System.out.println("Номера разрядов : 1 , 2");
+        } else if (hundreds1 == hundreds2 & ones1 == ones2) {
+            System.out.println("Одинаковые в них цифры : " + hundreds1 + ", " + ones1);
+            System.out.println("Номера разрядов : 1 , 3");
+        } else if (tens1 == tens2 & ones1 == ones2) {
+            System.out.println("Одинаковые в них цифры : " + tens1 + ", " + ones1);
+            System.out.println("Номера разрядов : 2 , 3");
+        } else if (ones1 == ones2) {
+            System.out.println("Одинаковые в них цифры : " + ones1);
+            System.out.println("Номер разряда : 3");
+        } else if (tens1 == tens2) {
+            System.out.println("Одинаковые в них цифры : " + tens1);
+            System.out.println("Номер разряда : 2");
+        } else if (hundreds1 == hundreds2) {
+            System.out.println("Одинаковые в них цифры : " + hundreds1);
+            System.out.println("Номер разряда : 1");
         }
 
         System.out.println("\n 5. Определение символа по его коду");
         char simbol1 = '\u0057';
-        char simbol2 = '\u0058';
-        char simbol3 = '\u0031';
         System.out.println("" + simbol1);
-        System.out.println("" + simbol2);
-        System.out.println("" + simbol3);
-        System.out.println((int) simbol3 + " - " + simbol3);
-        if ((int) simbol3 >= 65 & (int) simbol3 <= 90) {
+        System.out.println(simbol1 + " - " + simbol1);
+        if ('W' >= 65 & 'W' <= 90) {
             System.out.println("Это заглавная буква");
-        } else if ((int) simbol3 >= 97 & (int) simbol3 <= 122) {
+        } else if ('W' >= 97 & 'W' <= 122) {
             System.out.println("Это строчная буква");
-        } else if ((int) simbol3 >= 48 & (int) simbol3 <= 57) {
+        } else if ('W' >= 48 & 'W' <= 57) {
             System.out.println("Это цифра");
         } else {
             System.out.println("Это другой символ");
@@ -130,11 +113,11 @@ public class IfElseStatementTheme {
         System.out.println("\n 6. Подсчет начисленных банком %");
         var contribution = new BigDecimal("321123.59");
         var rate = new BigDecimal("0.05");
-        var b1 = new BigDecimal("100000");
-        var b2 = new BigDecimal("300000");
-        if (contribution.compareTo(b1) == -1) {
+        var amount1 = new BigDecimal("100000");
+        var amount2 = new BigDecimal("300000");
+        if (contribution.compareTo(amount1) == -1) {
             rate = new BigDecimal("0.05");
-        } else if ((contribution.compareTo(b1) == 0) & (contribution.compareTo(b2) == -1)) {
+        } else if ((contribution.compareTo(amount1) == 0) & (contribution.compareTo(amount2) == -1)) {
             rate = new BigDecimal("0.07");
         } else {
             rate = new BigDecimal("0.1");
