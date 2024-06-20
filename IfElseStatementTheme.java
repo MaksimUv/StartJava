@@ -30,18 +30,18 @@ public class IfElseStatementTheme {
             System.out.println("Да как же вас зовут?\n");
         }
 
-        System.out.println("2. Поиск большего числа");
+        System.out.println("\n 2. Поиск большего числа");
         int x = 10;
         int y = 10;
         if (x > y) {
-            System.out.println("x = " + x + ", y = " + y + ", x > y");
+            System.out.println(x + " > " + y);
         } else if (x < y) {
-            System.out.println("x = " + x + ", y = " + y + ", x < y");
+            System.out.println(x + " < " + y);
         } else {
-            System.out.println("x = " + x + ", y = " + y + ", x = y\n");
+            System.out.println(x + " = " + y);
         }
 
-        System.out.println("3. Проверка числа");
+        System.out.println("\n 3. Проверка числа");
         int numberVar = -10;
         if (numberVar == 0) {
             System.out.println("Значение равно нулю");
@@ -73,27 +73,27 @@ public class IfElseStatementTheme {
         } else {
             System.out.println("Исходные числа : " + number1 + ", " + number2);
         }
-        if (hundreds1 == hundreds2 & tens1 == tens2 & ones1 == ones2) {
-            System.out.println("Одинаковые в них цифры : " + hundreds1 + ", " + tens1 + ", " + ones1);
-            System.out.println("Номера разрядов : 1 , 2 , 3");
-        } else if (hundreds1 == hundreds2 & tens1 == tens2) {
-            System.out.println("Одинаковые в них цифры : " + hundreds1 + ", " + tens1);
-            System.out.println("Номера разрядов : 1 , 2");
-        } else if (hundreds1 == hundreds2 & ones1 == ones2) {
-            System.out.println("Одинаковые в них цифры : " + hundreds1 + ", " + ones1);
-            System.out.println("Номера разрядов : 1 , 3");
-        } else if (tens1 == tens2 & ones1 == ones2) {
-            System.out.println("Одинаковые в них цифры : " + tens1 + ", " + ones1);
-            System.out.println("Номера разрядов : 2 , 3");
-        } else if (ones1 == ones2) {
-            System.out.println("Одинаковые в них цифры : " + ones1);
-            System.out.println("Номер разряда : 3");
+        if (hundreds1 == hundreds2) {
+            System.out.println("Одинаковые в них цифры : " + hundreds1);
+            System.out.println("Номер разряда : 1 ");
+            if (tens1 == tens2) {
+                System.out.println("Одинаковые в них цифры : " + tens1);
+                System.out.println("Номер разряда : 2");
+                if (ones1 == ones2) {
+                    System.out.println("Одинаковые в них цифры : " + ones1);
+                    System.out.println("Номер разряда : 3");
+                }
+            }
         } else if (tens1 == tens2) {
             System.out.println("Одинаковые в них цифры : " + tens1);
-            System.out.println("Номер разряда : 2");
-        } else if (hundreds1 == hundreds2) {
-            System.out.println("Одинаковые в них цифры : " + hundreds1);
-            System.out.println("Номер разряда : 1");
+            System.out.println("Номер разряда : 2 ");
+            if (ones1 == ones2) {
+                System.out.println("Одинаковые в них цифры : " + ones1);
+                System.out.println("Номер разряда : 3 ");
+            }
+        } else if (ones1 == ones2) {
+            System.out.println("Одинаковые в них цифры : " + ones1);
+            System.out.println("Номера разрядов : 3");
         }
 
         System.out.println("\n 5. Определение символа по его коду");
