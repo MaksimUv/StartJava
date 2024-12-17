@@ -122,8 +122,8 @@ public class VariableNamesTheme {
         System.out.println("2.boolean-переменные ");
 
         // сотни равны?
-        boolean isEqualHundreds = true;
-        System.out.println("сотни равны ? = " + isEqualHundreds);
+        boolean isHundredsEqual = true;
+        System.out.println("сотни равны ? = " + isHundredsEqual);
 
         // компьютер включен?
         boolean isComputerTurnedOn = false;
@@ -150,8 +150,8 @@ public class VariableNamesTheme {
         System.out.println("новое ? = " + isNew);
 
         // электронная почта действительная?
-        boolean isValidEmail = true;
-        System.out.println("электронная почта действительная ? = " + isValidEmail);
+        boolean isEmailValid = true;
+        System.out.println("электронная почта действительная ? = " + isEmailValid);
 
         // имеются уникальные строки?
         boolean hasUniqueStrings = true;

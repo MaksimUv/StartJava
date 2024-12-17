@@ -27,11 +27,11 @@ public class VariablesTheme {
         var totaCost = penPrice.add(bookPrice);
         var sumDiscount = totaCost.multiply(discount);
         var discountPrice = totaCost.subtract(sumDiscount);
-        System.out.println(String.format("%.2f", totaCost) + " - общая стоимость товаров без скидки");
-        System.out.println(String.format("%.2f", sumDiscount) + " - сумма скидки");
-        System.out.println(String.format("%.2f", discountPrice) + " - общая стоимость со скидкой ");
+        System.out.printf("общая стоимость товаров без скидки - %.2f" , totaCost);
+        System.out.printf(" \n сумма скидки - %.2f" , sumDiscount);
+        System.out.printf(" \n общая стоимость со скидкой - %.2f" , discountPrice);
 
-        System.out.println(" \n 3. Вывод слова JAVA");
+        System.out.println(" \n \n 3. Вывод слова JAVA");
         System.out.println("    J    a  v     v  a");
         System.out.println("    J   a a  v   v  a  a");
         System.out.println(" J  J  aaaaa  v v  aaaaaa");
